@@ -1,0 +1,22 @@
+@import "tailwindcss";
+
+body{
+  background-color: black;
+  color:white;
+}
+
+.dock-icon {
+  transition: all 0.5s cubic-bezier(0.19, 1, 0.22, 1);
+}
+
+.dock-icon:hover {
+  transform: scale(1.2) translateY(-8px);
+}
+
+.dock-icon:hover + .dock-icon {
+  transform: scale(1.1) translateY(-4px);
+}
+
+.dock-icon:has(+ .dock-icon:hover) {
+  transform: scale(1.1) translateY(-4px);
+}
