@@ -1,0 +1,38 @@
+[
+  {
+    "id": 1,
+    "image": "https://images.unsplash.com/photo-1537498425277-c283d32ef9db",
+    "title": "TaskFlow – A Task Management App",
+    "description": "A productivity web app built to help users manage tasks with a clean UI, reminders, and real-time status updates.",
+    "tags": ["React", "Node.js", "MongoDB", "Express"],
+    "repoLink": "https://github.com/example/taskflow",
+    "demoLink": "https://taskflow-demo.netlify.app/"
+  },
+  {
+    "id": 2,
+    "image": "https://images.unsplash.com/photo-1550439062-609e1531270e",
+    "title": "PixelDraw – Online Drawing Board",
+    "description": "A pixel-based drawing tool inspired by MS Paint with drag-to-draw, color picker, eraser, and grid snapping.",
+    "tags": ["JavaScript", "Canvas API", "CSS Grid"],
+    "repoLink": "https://github.com/example/pixeldraw",
+    "demoLink": "https://pixeldraw-demo.vercel.app/"
+  },
+  {
+    "id": 3,
+    "image": "https://images.unsplash.com/photo-1498050108023-c5249f4df085",
+    "title": "DevFinder – GitHub Profile Explorer",
+    "description": "A search tool that fetches GitHub profiles and displays repos, activity graphs, and pinned projects.",
+    "tags": ["React", "API Integration", "Tailwind"],
+    "repoLink": "https://github.com/example/devfinder",
+    "demoLink": "https://devfinder-search.netlify.app/"
+  },
+  {
+    "id": 4,
+    "image": "https://images.unsplash.com/photo-1525182008055-f88b95ff7980",
+    "title": "EduGenius – Course Recommendation System",
+    "description": "An AI-powered recommendation system that suggests the right courses based on user goals and skill level.",
+    "tags": ["Python", "Machine Learning", "Flask", "React"],
+    "repoLink": "https://github.com/example/edugenius",
+    "demoLink": "https://edugenius-app.vercel.app/"
+  }
+]
