@@ -1,7 +1,7 @@
 import React, { useState, useRef, useEffect } from "react";
 import MacWin from "./MacWin";
 
-const Cli = () => {
+const Cli = ({ setWindowState }) => {
   const welcomeMessage = `
 ╔════════════════════════════════════════╗
 ║      Welcome to Rishi's Portfolio CLI  ║
@@ -180,7 +180,7 @@ LinkedIn: linkedin.com/in/rishi-ranjan`,
   };
 
   return (
-    <MacWin>
+    <MacWin setWindowState={setWindowState} windowKey="cli">
       <div
         ref={terminalRef}
         className="cli-window h-full bg-black/20 text-green-400 font-mono p-4 overflow-scroll scrollbar-hidden pb-10"

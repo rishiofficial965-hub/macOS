@@ -33,9 +33,9 @@ const GitCard = ({
   );
 };
 
-const Github = () => {
+const Github = ({ setWindowState }) => {
   return (
-    <MacWin>
+    <MacWin setWindowState={setWindowState} windowKey="github">
       <div className="flex flex-wrap h-full overflow-scroll scrollbar-hidden pb-10 gap-3 px-2">
         {githubData.map((project) => (
           <GitCard key={project.id} data={project} />

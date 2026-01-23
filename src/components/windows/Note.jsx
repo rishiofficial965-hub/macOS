@@ -3,7 +3,7 @@ import Markdown from "react-markdown";
 import MacWin from "./MacWin";
 import SyntaxHighlighter from "react-syntax-highlighter";
 import { atelierDuneDark } from "react-syntax-highlighter/dist/esm/styles/hljs";
-const Note = () => {
+const Note = ({ setWindowState }) => {
   const [markdown, setMarkdown] = useState(null);
 
   useEffect(() => {
@@ -12,7 +12,7 @@ const Note = () => {
       .then((text) => setMarkdown(text));
   }, []);
   return (
-    <MacWin>
+    <MacWin setWindowState={setWindowState} windowKey="note">
       <div className="p-1 h-full overflow-scroll text-sm pb-10 scrollbar-hidden">
         {markdown ? (
           <SyntaxHighlighter

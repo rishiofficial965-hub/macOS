@@ -1,9 +1,9 @@
 import React from 'react'
 import MacWin from './MacWin'
 
-const Resume = () => {
+const Resume = ({ setWindowState }) => {
   return (
-    <MacWin>
+    <MacWin setWindowState={setWindowState} windowKey="resume">
         <div className='h-full'>
             <embed className='h-full w-full' src="/CV_MAIN.pdf" frameBorder="0"></embed>
         </div>

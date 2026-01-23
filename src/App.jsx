@@ -20,11 +20,11 @@ const App = () => {
     <main className="relative overflow-hidden h-screen bg-[url('/mac.jpg')] bg-cover bg-center">
       <Nav />
       <Dock WindowsState={WindowsState} setWindowState={setWindowState} />
-      {WindowsState.github && <Github />}
-      {WindowsState.note && <Note />}
-      {WindowsState.resume && <Resume />}
-      {WindowsState.spotify && <Spotify />}
-      {WindowsState.cli && <Cli />}
+      {WindowsState.github && <Github setWindowState={setWindowState} />}
+      {WindowsState.note && <Note setWindowState={setWindowState} />}
+      {WindowsState.resume && <Resume setWindowState={setWindowState} />}
+      {WindowsState.spotify && <Spotify setWindowState={setWindowState} />}
+      {WindowsState.cli && <Cli setWindowState={setWindowState} />}
     </main>
   );
 };
