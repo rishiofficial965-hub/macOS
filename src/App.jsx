@@ -1,15 +1,30 @@
-import React from "react";
+import React, { useState } from "react";
 import Nav from "./components/Nav";
-import Github from './components/windows/Github'
+import Github from "./components/windows/Github";
 import MacWin from "./components/windows/MacWin";
-import Dock from "./components/Dock"
+import Dock from "./components/Dock";
+import Note from "./components/windows/Note";
+import Resume from "./components/windows/Resume";
+import Spotify from "./components/windows/Spotify";
+import Cli from "./components/windows/Cli";
 
 const App = () => {
+  const [WindowsState, setWindowState] = useState({
+    github: false,
+    note: false,
+    resume: false,
+    spotify: false,
+    cli: false,
+  });
   return (
-    <main className="h-screen bg-[url('/mac.jpg')] bg-cover bg-center">
-      <Nav></Nav>
-      <Dock></Dock>
-      <Github></Github>
+    <main className="relative overflow-hidden h-screen bg-[url('/mac.jpg')] bg-cover bg-center">
+      <Nav />
+      <Dock WindowsState={WindowsState} setWindowState={setWindowState} />
+      {WindowsState.github && <Github />}
+      {WindowsState.note && <Note />}
+      {WindowsState.resume && <Resume />}
+      {WindowsState.spotify && <Spotify />}
+      {WindowsState.cli && <Cli />}
     </main>
   );
 };
