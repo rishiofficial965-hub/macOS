@@ -1,0 +1,47 @@
+[
+    {
+      "id": "this-pc",
+      "name": "This PC",
+      "icon": "/assets/desktop-icons/this-pc.png",
+      "type": "system",
+      "action": "open-file-explorer"
+    },
+    {
+      "id": "hp-support",
+      "name": "HP Support Assistant",
+      "icon": "/assets/desktop-icons/hp-support.png",
+      "type": "application",
+      "action": "launch-app"
+    },
+    {
+      "id": "edge",
+      "name": "Microsoft Edge",
+      "icon": "/assets/desktop-icons/edge.png",
+      "type": "browser",
+      "action": "launch-browser",
+      "url": "https://www.microsoft.com/edge"
+    },
+    {
+      "id": "chromium",
+      "name": "Chromium",
+      "icon": "/assets/desktop-icons/chromium.png",
+      "type": "browser",
+      "action": "launch-browser",
+      "url": "https://www.chromium.org"
+    },
+    {
+      "id": "recycle-bin",
+      "name": "Recycle Bin",
+      "icon": "/assets/desktop-icons/recycle-bin.png",
+      "type": "system",
+      "action": "open-recycle-bin"
+    },
+    {
+      "id": "python",
+      "name": "python-ma...",
+      "icon": "/assets/desktop-icons/python.png",
+      "type": "folder",
+      "action": "open-folder",
+      "path": "python-machine-learning"
+    }
+  ]

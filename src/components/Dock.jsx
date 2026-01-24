@@ -4,7 +4,7 @@ const Dock = ({ setWindowState }) => {
   return (
     <footer className="flex items-center justify-center gap-2 px-4 py-2 absolute bottom-2 left-1/2 -translate-x-1/2 backdrop-blur-lg bg-white/10 rounded-2xl shadow-lg">
       <div
-        onClick={() => setWindowState((s) => ({ ...s, github: true }))}
+        onClick={() => setWindowState((s) => ({ ...s, github: !s.github }))}
         className="dock-icon bg-gradient-to-b from-white to-black p-2 rounded-2xl flex justify-center items-center"
       >
         <img className="w-6 h-6" src="/doc-icons/github.svg" />
@@ -20,7 +20,7 @@ const Dock = ({ setWindowState }) => {
       </div>
 
       <div
-        onClick={() => setWindowState((s) => ({ ...s, cli: true }))}
+        onClick={() => setWindowState((s) => ({ ...s, cli: !s.cli }))}
         className="dock-icon bg-black p-2 rounded-2xl flex justify-center items-center"
       >
         <img className="w-6 h-6" src="/doc-icons/cli.svg" />
@@ -48,21 +48,21 @@ const Dock = ({ setWindowState }) => {
       </div>
 
       <div
-        onClick={() => setWindowState((s) => ({ ...s, note: true }))}
+        onClick={() => setWindowState((s) => ({ ...s, note: !s.note }))}
         className="dock-icon bg-gradient-to-r from-orange-400 to-orange-500 p-2 rounded-2xl flex justify-center items-center"
       >
         <img className="w-6 h-6" src="/doc-icons/note.svg" />
       </div>
 
       <div
-        onClick={() => setWindowState((s) => ({ ...s, resume: true }))}
+        onClick={() => setWindowState((s) => ({ ...s, resume: !s.resume }))}
         className="dock-icon bg-gradient-to-r from-red-400 to-red-500 p-2 rounded-2xl flex justify-center items-center"
       >
         <img className="w-6 h-6" src="/doc-icons/pdf.svg" />
       </div>
 
       <div
-        onClick={() => setWindowState((s) => ({ ...s, spotify: true }))}
+        onClick={() => setWindowState((s) => ({ ...s, spotify: !s.spotify }))}
         className="dock-icon bg-gradient-to-r from-green-400 to-green-700 p-2 rounded-2xl flex justify-center items-center"
       >
         <img className="w-6 h-6" src="/doc-icons/spotify.svg" />

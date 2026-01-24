@@ -1,35 +1,63 @@
-import React from "react";
-import DateTime from "./DateTime"
+import React, { useState } from "react";
+import DateTime from "./DateTime";
+import Drop from "./Drop";
+import Drop1 from "./Drop1";
 
-const Nav = () => {
+const Nav = ({ setWindowState }) => {
+  const [showFileMenu, setShowFileMenu] = useState(false);
+  const [showFile1Menu, setShowFile1Menu] = useState(false);
+
   return (
-    <nav className="flex justify-between items-center px-5 py-3 backdrop-blur-md bg-white/10 shadow-lg">
-      <div className="flex gap-4">
-        <div className="flex justify-center ">
-          <img src="/navbar-icons/apple.svg" />
+    <div className="relative">
+      <nav className="relative flex justify-between items-center px-5 py-3 backdrop-blur-md bg-white/10 shadow-lg">
+        <div className="flex gap-4 cursor-pointer">
+          <div
+            onClick={() => {
+              setShowFileMenu((prev) => !prev);
+              setShowFile1Menu(false);
+            }}
+            className="flex justify-center "
+          >
+            <img src="/navbar-icons/apple.svg" />
+          </div>
+          <div>
+            <p>Rishi Ranjan</p>
+          </div>
+          <div
+            onClick={() => {
+              setShowFileMenu(false);
+              setShowFile1Menu((prev) => !prev);
+            }}
+          >
+            <p>File</p>
+          </div>
+          <div>
+            <p>Window</p>
+          </div>
+          <div onClick={() => setWindowState((s) => ({ ...s, cli: !s.cli }))}>
+            <p>Terminal</p>
+          </div>
         </div>
-        <div>
-          <p>Rishi Ranjan</p>
+        <div className="flex gap-4 items-center">
+          <div className="cursor-pointer">
+            <img src="/navbar-icons/wifi.svg" />
+          </div>
+          <div>
+            <DateTime />
+          </div>
         </div>
-        <div>
-          <p>File</p>
+      </nav>
+      {showFileMenu && (
+        <div className="absolute top-12 left-2 z-10">
+          <Drop />
         </div>
-        <div>
-          <p>Window</p>
+      )}
+      {showFile1Menu && (
+        <div className="absolute top-12 left-35 z-10">
+          <Drop1 />
         </div>
-        <div>
-          <p>Terminal</p>
-        </div>
-      </div>
-      <div className="flex gap-4 items-center">
-        <div>
-            <img src="/navbar-icons/wifi.svg"/>
-        </div>
-        <div>
-            <DateTime></DateTime>
-        </div>
-      </div>
-    </nav>
+      )}
+    </div>
   );
 };
 
