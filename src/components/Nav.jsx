@@ -9,21 +9,22 @@ const Nav = ({ setWindowState }) => {
 
   return (
     <div className="relative">
-      <nav className="relative flex justify-between items-center px-5 py-3 backdrop-blur-md bg-white/10 shadow-lg">
-        <div className="flex gap-4 cursor-pointer">
+      <nav className="relative flex justify-between items-center px-5  backdrop-blur-md bg-white/10 shadow-lg">
+        <div className="flex items-center gap-4 cursor-pointer py-1">
           <div
             onClick={() => {
               setShowFileMenu((prev) => !prev);
               setShowFile1Menu(false);
             }}
-            className="flex justify-center "
+            className="flex justify-center hover:bg-white/10 hover:backdrop-blur-md hover:shadow-lg px-2 py-2 rounded "
           >
             <img src="/navbar-icons/apple.svg" />
           </div>
-          <div>
+          <div className="hover:bg-white/10 hover:backdrop-blur-md hover:shadow-lg px-2 py-2 rounded ">
             <p>Rishi Ranjan</p>
           </div>
           <div
+            className="hover:bg-white/10 hover:backdrop-blur-md hover:shadow-lg px-4 py-2 rounded "
             onClick={() => {
               setShowFileMenu(false);
               setShowFile1Menu((prev) => !prev);
@@ -31,18 +32,21 @@ const Nav = ({ setWindowState }) => {
           >
             <p>File</p>
           </div>
-          <div>
+          <div className="hover:bg-white/10 hover:backdrop-blur-md hover:shadow-lg px-2 py-2 rounded ">
             <p>Window</p>
           </div>
-          <div onClick={() => setWindowState((s) => ({ ...s, cli: !s.cli }))}>
+          <div
+            className="hover:bg-white/10 hover:backdrop-blur-md hover:shadow-lg px-2 py-2 rounded "
+            onClick={() => setWindowState((s) => ({ ...s, cli: !s.cli }))}
+          >
             <p>Terminal</p>
           </div>
         </div>
         <div className="flex gap-4 items-center">
-          <div className="cursor-pointer">
+          <div className="hover:bg-white/10 hover:backdrop-blur-md hover:shadow-lg px-2 py-2 rounded cursor-pointer">
             <img src="/navbar-icons/wifi.svg" />
           </div>
-          <div>
+          <div className="hover:bg-white/10 hover:backdrop-blur-md hover:shadow-lg px-2 py-2 rounded cursor-pointer">
             <DateTime />
           </div>
         </div>

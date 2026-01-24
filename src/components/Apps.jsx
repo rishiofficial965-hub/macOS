@@ -5,7 +5,7 @@ const Apps = () => {
   return (<>
     <div className='flex flex-col gap-5 absolute top-16 left-3 px-2 py-2'>
         {photo.map((photo, index) => (
-           <div className='flex flex-col items-center gap-1 w-20 cursor-pointer' key={index}>
+           <div className='flex flex-col items-center gap-1 w-20 cursor-pointer hover:scale-105 transition-transform transition-all duration-200' key={index}>
              <div className='w-15 h-15 rounded-3xl overflow-hidden'>
                <img className='h-full w-full object-cover' src={photo.icon} alt={photo.name} />
              </div>
