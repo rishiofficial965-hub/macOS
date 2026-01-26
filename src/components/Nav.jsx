@@ -18,7 +18,7 @@ const Nav = ({ setWindowState }) => {
             }}
             className="flex justify-center hover:bg-white/10 hover:backdrop-blur-md hover:shadow-lg px-2 py-2 rounded "
           >
-            <img src="/navbar-icons/apple.svg" />
+            <img src={`${import.meta.env.BASE_URL}navbar-icons/apple.svg`} />
           </div>
           <div className="hover:bg-white/10 hover:backdrop-blur-md hover:shadow-lg px-2 py-2 rounded ">
             <p>Rishi Ranjan</p>
@@ -44,7 +44,7 @@ const Nav = ({ setWindowState }) => {
         </div>
         <div className="flex gap-4 items-center">
           <div className="hover:bg-white/10 hover:backdrop-blur-md hover:shadow-lg px-2 py-2 rounded cursor-pointer">
-            <img src="/navbar-icons/wifi.svg" />
+            <img src={`${import.meta.env.BASE_URL}navbar-icons/wifi.svg`} />
           </div>
           <div className="hover:bg-white/10 hover:backdrop-blur-md hover:shadow-lg px-2 py-2 rounded cursor-pointer">
             <DateTime />

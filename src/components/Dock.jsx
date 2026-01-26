@@ -7,7 +7,7 @@ const Dock = ({ setWindowState }) => {
         onClick={() => setWindowState((s) => ({ ...s, github: !s.github }))}
         className="dock-icon bg-gradient-to-b from-white to-black p-2 rounded-2xl flex justify-center items-center"
       >
-        <img className="w-6 h-6" src="/doc-icons/github.svg" />
+        <img className="w-6 h-6" src={`${import.meta.env.BASE_URL}doc-icons/github.svg`} />
       </div>
 
       <div
@@ -16,14 +16,14 @@ const Dock = ({ setWindowState }) => {
         }}
         className="dock-icon bg-gradient-to-r from-blue-400 to-blue-700 p-2 rounded-2xl flex justify-center items-center"
       >
-        <img className="w-6 h-6" src="/doc-icons/calender.svg" />
+        <img className="w-6 h-6" src={`${import.meta.env.BASE_URL}doc-icons/calender.svg`} />
       </div>
 
       <div
         onClick={() => setWindowState((s) => ({ ...s, cli: !s.cli }))}
         className="dock-icon bg-black p-2 rounded-2xl flex justify-center items-center"
       >
-        <img className="w-6 h-6" src="/doc-icons/cli.svg" />
+        <img className="w-6 h-6" src={`${import.meta.env.BASE_URL}doc-icons/cli.svg`} />
       </div>
 
       <div
@@ -35,7 +35,7 @@ const Dock = ({ setWindowState }) => {
         }}
         className="dock-icon bg-gradient-to-r from-purple-300 to-purple-700 p-2 rounded-2xl flex justify-center items-center"
       >
-        <img className="w-6 h-6" src="/doc-icons/link.svg" />
+        <img className="w-6 h-6" src={`${import.meta.env.BASE_URL}doc-icons/link.svg`} />
       </div>
 
       <div
@@ -44,28 +44,28 @@ const Dock = ({ setWindowState }) => {
         }}
         className="dock-icon bg-gradient-to-r from-blue-400 to-blue-700 p-2 rounded-2xl flex justify-center items-center"
       >
-        <img className="w-6 h-6" src="/doc-icons/mail.svg" />
+        <img className="w-6 h-6" src={`${import.meta.env.BASE_URL}doc-icons/mail.svg`} />
       </div>
 
       <div
         onClick={() => setWindowState((s) => ({ ...s, note: !s.note }))}
         className="dock-icon bg-gradient-to-r from-orange-400 to-orange-500 p-2 rounded-2xl flex justify-center items-center"
       >
-        <img className="w-6 h-6" src="/doc-icons/note.svg" />
+        <img className="w-6 h-6" src={`${import.meta.env.BASE_URL}doc-icons/note.svg`} />
       </div>
 
       <div
         onClick={() => setWindowState((s) => ({ ...s, resume: !s.resume }))}
         className="dock-icon bg-gradient-to-r from-red-400 to-red-500 p-2 rounded-2xl flex justify-center items-center"
       >
-        <img className="w-6 h-6" src="/doc-icons/pdf.svg" />
+        <img className="w-6 h-6" src={`${import.meta.env.BASE_URL}doc-icons/pdf.svg`} />
       </div>
 
       <div
         onClick={() => setWindowState((s) => ({ ...s, spotify: !s.spotify }))}
         className="dock-icon bg-gradient-to-r from-green-400 to-green-700 p-2 rounded-2xl flex justify-center items-center"
       >
-        <img className="w-6 h-6" src="/doc-icons/spotify.svg" />
+        <img className="w-6 h-6" src={`${import.meta.env.BASE_URL}doc-icons/spotify.svg`} />
       </div>
     </footer>
   );

@@ -18,7 +18,7 @@ const App = () => {
     cli: false,
   });
   return (
-    <main className="relative overflow-hidden h-screen bg-[url('/mac.jpg')] bg-cover bg-center">
+    <main className="relative overflow-hidden h-screen bg-[url('./mac.jpg')] bg-cover bg-center">
       <Nav WindowsState={WindowsState} setWindowState={setWindowState} />
       <Dock WindowsState={WindowsState} setWindowState={setWindowState} />
       {WindowsState.github && <Github setWindowState={setWindowState} />}
