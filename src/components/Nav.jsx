@@ -2,6 +2,8 @@ import React, { useState } from "react";
 import DateTime from "./DateTime";
 import Drop from "./Drop";
 import Drop1 from "./Drop1";
+import appleIcon from "../assets/navbar-icons/apple.svg";
+import wifiIcon from "../assets/navbar-icons/wifi.svg";
 
 const Nav = ({ setWindowState }) => {
   const [showFileMenu, setShowFileMenu] = useState(false);
@@ -18,7 +20,7 @@ const Nav = ({ setWindowState }) => {
             }}
             className="flex justify-center hover:bg-white/10 hover:backdrop-blur-md hover:shadow-lg px-2 py-2 rounded "
           >
-            <img src={`${import.meta.env.BASE_URL}navbar-icons/apple.svg`} />
+            <img src={appleIcon} alt="Apple" />
           </div>
           <div className="hover:bg-white/10 hover:backdrop-blur-md hover:shadow-lg px-2 py-2 rounded ">
             <p>Rishi Ranjan</p>
@@ -44,7 +46,7 @@ const Nav = ({ setWindowState }) => {
         </div>
         <div className="flex gap-4 items-center">
           <div className="hover:bg-white/10 hover:backdrop-blur-md hover:shadow-lg px-2 py-2 rounded cursor-pointer">
-            <img src={`${import.meta.env.BASE_URL}navbar-icons/wifi.svg`} />
+            <img src={wifiIcon} alt="WiFi" />
           </div>
           <div className="hover:bg-white/10 hover:backdrop-blur-md hover:shadow-lg px-2 py-2 rounded cursor-pointer">
             <DateTime />

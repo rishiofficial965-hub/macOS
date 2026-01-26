@@ -8,6 +8,7 @@ import Resume from "./components/windows/Resume";
 import Spotify from "./components/windows/Spotify";
 import Cli from "./components/windows/Cli";
 import Apps from "./components/Apps";
+import macBg from "./assets/mac.jpg";
 
 const App = () => {
   const [WindowsState, setWindowState] = useState({
@@ -18,7 +19,7 @@ const App = () => {
     cli: false,
   });
   return (
-    <main className="relative overflow-hidden h-screen bg-[url('./mac.jpg')] bg-cover bg-center">
+    <main className="relative overflow-hidden h-screen bg-cover bg-center" style={{ backgroundImage: `url(${macBg})` }}>
       <Nav WindowsState={WindowsState} setWindowState={setWindowState} />
       <Dock WindowsState={WindowsState} setWindowState={setWindowState} />
       {WindowsState.github && <Github setWindowState={setWindowState} />}
