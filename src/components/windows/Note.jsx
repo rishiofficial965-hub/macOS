@@ -7,7 +7,7 @@ const Note = ({ setWindowState }) => {
   const [markdown, setMarkdown] = useState(null);
 
   useEffect(() => {
-    fetch("/note.txt")
+    fetch("src/assets/note.txt")
       .then((res) => res.text())
       .then((text) => setMarkdown(text));
   }, []);
