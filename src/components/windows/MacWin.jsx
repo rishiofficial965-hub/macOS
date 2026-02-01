@@ -1,5 +1,6 @@
-import React, { Children } from "react";
+import React from "react";
 import { Rnd } from "react-rnd";
+import { motion, AnimatePresence } from "framer-motion";
 
 const MacWin = ({ children, setWindowState, windowKey, title = "Terminal" }) => {
   const handleClose = () => {
@@ -9,36 +10,56 @@ const MacWin = ({ children, setWindowState, windowKey, title = "Terminal" }) => 
   };
 
   return (
-    <Rnd
-      default={{
-        width: "35vw",
-        height: "35vh",
-        x: 300,
-        y: 200,
-      }}
-    >
-      <div className="bg-black/70 rounded-2xl overflow-hidden h-full overflow-hidden">
-        <div className="flex items-center px-3 py-2 backdrop-blur-md bg-white/10 shadow-lg rounded-md gap-4 border-b-1 ">
-          <div className="flex gap-1.5">
-            <div
-              onClick={handleClose}
-              className="closed group h-4 w-4 bg-red-500 rounded-full cursor-pointer flex justify-center items-center"
-            >
-              <p className="hidden group-hover:block text-black mb-1 font-extrabold">
-                +
-              </p>
+    <AnimatePresence>
+      <Rnd
+        default={{
+          width: "50vw",
+          height: "50vh",
+          x: window.innerWidth / 2 - (window.innerWidth * 0.5) / 2,
+          y: window.innerHeight / 2 - (window.innerHeight * 0.5) / 2,
+        }}
+        minWidth={300}
+        minHeight={200}
+        bounds="parent"
+        dragHandleClassName="window-header"
+      >
+        <motion.div
+          initial={{ scale: 0.8, opacity: 0 }}
+          animate={{ scale: 1, opacity: 1 }}
+          exit={{ scale: 0.8, opacity: 0 }}
+          transition={{ type: "spring", damping: 25, stiffness: 300 }}
+          className="flex flex-col h-full glass-dark rounded-xl overflow-hidden border border-white/20 shadow-2xl"
+        >
+          {/* Window Header */}
+          <div className="window-header flex items-center px-4 py-2.5 bg-white/5 border-b border-white/10 select-none">
+            <div className="flex gap-2">
+              <button
+                onClick={handleClose}
+                className="group relative flex items-center justify-center w-3 h-3 bg-[#FF5F56] rounded-full border border-black/10 active:opacity-70 transition-all cursor-default"
+              >
+                <span className="opacity-0 group-hover:opacity-100 text-[10px] text-black/60 font-bold transition-opacity">✕</span>
+              </button>
+              <button className="group relative flex items-center justify-center w-3 h-3 bg-[#FFBD2E] rounded-full border border-black/10 transition-all cursor-default">
+                <span className="opacity-0 group-hover:opacity-100 text-[10px] text-black/60 font-bold transition-opacity">−</span>
+              </button>
+              <button className="group relative flex items-center justify-center w-3 h-3 bg-[#27C93F] rounded-full border border-black/10 transition-all cursor-default">
+                <span className="opacity-0 group-hover:opacity-100 text-[10px] text-black/60 font-bold transition-opacity">+</span>
+              </button>
             </div>
-
-            <div className="h-4 w-4 bg-yellow-300 rounded-full cursor-pointer"></div>
-            <div className="h-4 w-4 bg-green-400 rounded-full cursor-pointer"></div>
+            <div className="flex-1 text-center pr-12">
+              <span className="text-xs font-medium text-white/70 tracking-tight">{title}</span>
+            </div>
           </div>
-          <div className="">{title}</div>
-        </div>
 
-        <div className="h-full p-2">{children}</div>
-      </div>
-    </Rnd>
+          {/* Window Content */}
+          <div className="flex-1 overflow-hidden relative">
+            {children}
+          </div>
+        </motion.div>
+      </Rnd>
+    </AnimatePresence>
   );
 };
 
 export default MacWin;
+

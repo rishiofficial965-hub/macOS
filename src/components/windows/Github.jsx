@@ -2,32 +2,51 @@ import React from "react";
 import MacWin from "./MacWin";
 import githubData from "../../assets/github.json";
 
-const GitCard = ({
-  data = {
-    id: 1,
-    image: "",
-    title: "",
-    description: "",
-    tags: [],
-    repoLink: "",
-    demoLink: "",
-  },
-}) => {
+const GitCard = ({ data }) => {
   return (
-    <div className="flex flex-col flex-wrap gap-2 max-w-xs px-3 py-3 bg-white/15 rounded-2xl m-1" >
-      <img className="w-full rounded-xl" src={data.image} alt={data.title} />
-      <h1 className="font-bold text-xl">{data.title}</h1>
-      <p>{data.description}</p>
-
-      <div className="flex flex-wrap gap-2 ">
-        {data.tags.map((tag, index) => (
-          <p className="bg-black/40 rounded-xl px-3 py-2 whitespace-nowrap " key={index}>{tag}</p>
-        ))}
+    <div className="flex flex-col bg-white/5 border border-white/10 rounded-xl overflow-hidden hover:bg-white/10 transition-all group shadow-lg">
+      <div className="aspect-video overflow-hidden">
+        <img 
+          className="w-full h-full object-cover transition-transform duration-500 group-hover:scale-110" 
+          src={data.image} 
+          alt={data.title} 
+        />
       </div>
+      <div className="p-4 flex flex-col flex-1 gap-3">
+        <div>
+          <h3 className="font-bold text-lg text-white/90">{data.title}</h3>
+          <p className="text-xs text-white/50 line-clamp-2 mt-1">{data.description}</p>
+        </div>
 
-      <div className="flex justify-between px-5">
-        <a href={data.repoLink}>Repository</a>
-        <a href={data.demoLink}>Demo link</a>
+        <div className="flex flex-wrap gap-1.5 mt-auto">
+          {data.tags.map((tag, index) => (
+            <span 
+              className="text-[10px] bg-white/5 border border-white/10 rounded-full px-2 py-0.5 text-white/70" 
+              key={index}
+            >
+              {tag}
+            </span>
+          ))}
+        </div>
+
+        <div className="flex gap-4 pt-2 border-t border-white/5">
+          <a 
+            href={data.repoLink} 
+            target="_blank" 
+            rel="noopener noreferrer"
+            className="text-xs text-blue-400 hover:text-blue-300 transition-colors"
+          >
+            Repository
+          </a>
+          <a 
+            href={data.demoLink} 
+            target="_blank" 
+            rel="noopener noreferrer"
+            className="text-xs text-blue-400 hover:text-blue-300 transition-colors"
+          >
+            Live Demo
+          </a>
+        </div>
       </div>
     </div>
   );
@@ -36,13 +55,16 @@ const GitCard = ({
 const Github = ({ setWindowState }) => {
   return (
     <MacWin setWindowState={setWindowState} windowKey="github" title="GitHub Projects">
-      <div className="flex flex-wrap h-full overflow-scroll scrollbar-hidden pb-10 gap-3 px-2">
-        {githubData.map((project) => (
-          <GitCard key={project.id} data={project} />
-        ))}
+      <div className="h-full overflow-y-auto scrollbar-hidden p-6">
+        <div className="grid grid-cols-1 md:grid-cols-2 gap-6 pb-12">
+          {githubData.map((project) => (
+            <GitCard key={project.id} data={project} />
+          ))}
+        </div>
       </div>
     </MacWin>
   );
 };
 
 export default Github;
+

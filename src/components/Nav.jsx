@@ -1,4 +1,5 @@
 import React, { useState } from "react";
+import { motion, AnimatePresence } from "framer-motion";
 import DateTime from "./DateTime";
 import Drop from "./Drop";
 import Drop1 from "./Drop1";
@@ -11,7 +12,7 @@ const Nav = ({ setWindowState }) => {
 
   return (
     <div className="relative">
-      <nav className="relative flex justify-between items-center px-5  backdrop-blur-md bg-white/10 shadow-lg">
+      <nav className="relative flex justify-between items-center px-5  backdrop-blur-md bg-white/10 shadow-lg z-50">
         <div className="flex items-center gap-4 cursor-pointer py-1">
           <div
             onClick={() => {
@@ -53,18 +54,31 @@ const Nav = ({ setWindowState }) => {
           </div>
         </div>
       </nav>
-      {showFileMenu && (
-        <div className="absolute top-12 left-2 z-10">
-          <Drop />
-        </div>
-      )}
-      {showFile1Menu && (
-        <div className="absolute top-12 left-35 z-10">
-          <Drop1 />
-        </div>
-      )}
+      <AnimatePresence>
+        {showFileMenu && (
+          <motion.div
+            initial={{ opacity: 0, y: -10 }}
+            animate={{ opacity: 1, y: 0 }}
+            exit={{ opacity: 0, y: -10 }}
+            className="absolute top-12 left-2 z-10"
+          >
+            <Drop />
+          </motion.div>
+        )}
+        {showFile1Menu && (
+          <motion.div
+            initial={{ opacity: 0, y: -10 }}
+            animate={{ opacity: 1, y: 0 }}
+            exit={{ opacity: 0, y: -10 }}
+            className="absolute top-12 left-35 z-10"
+          >
+            <Drop1 />
+          </motion.div>
+        )}
+      </AnimatePresence>
     </div>
   );
 };
+
 
 export default Nav;

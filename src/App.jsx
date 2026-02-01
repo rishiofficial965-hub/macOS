@@ -1,7 +1,6 @@
 import React, { useState } from "react";
 import Nav from "./components/Nav";
 import Github from "./components/windows/Github";
-import MacWin from "./components/windows/MacWin";
 import Dock from "./components/Dock";
 import Note from "./components/windows/Note";
 import Resume from "./components/windows/Resume";
@@ -18,16 +17,22 @@ const App = () => {
     spotify: false,
     cli: false,
   });
+
   return (
-    <main className="relative overflow-hidden h-screen bg-cover bg-center" style={{ backgroundImage: `url(${macBg})` }}>
-      <Nav WindowsState={WindowsState} setWindowState={setWindowState} />
-      <Dock WindowsState={WindowsState} setWindowState={setWindowState} />
+    <main
+      className="relative overflow-hidden h-screen bg-cover bg-center select-none"
+      style={{ backgroundImage: `url(${macBg})` }}
+    >
+      <Nav setWindowState={setWindowState} />
+
       {WindowsState.github && <Github setWindowState={setWindowState} />}
       {WindowsState.note && <Note setWindowState={setWindowState} />}
       {WindowsState.resume && <Resume setWindowState={setWindowState} />}
       {WindowsState.spotify && <Spotify setWindowState={setWindowState} />}
       {WindowsState.cli && <Cli setWindowState={setWindowState} />}
       <Apps />
+
+      <Dock WindowsState={WindowsState} setWindowState={setWindowState} />
     </main>
   );
 };
