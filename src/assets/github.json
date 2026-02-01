@@ -1,38 +1,38 @@
 [
   {
     "id": 1,
-    "image": "https://images.unsplash.com/photo-1537498425277-c283d32ef9db",
-    "title": "TaskFlow – A Task Management App",
-    "description": "A productivity web app built to help users manage tasks with a clean UI, reminders, and real-time status updates.",
-    "tags": ["React", "Node.js", "MongoDB", "Express"],
-    "repoLink": "https://github.com/example/taskflow",
-    "demoLink": "https://taskflow-demo.netlify.app/"
+    "image": "https://images.unsplash.com/photo-1517694712202-14dd9538aa97",
+    "title": "React Animated Portfolio",
+    "description": "A high-performance React portfolio utilizing GSAP and Locomotive Scroll for an immersive, cinematic user experience with smooth motion.",
+    "tags": ["React", "GSAP", "Locomotive Scroll", "Tailwind"],
+    "repoLink": "https://github.com/rishiofficial965-hub/ReactProject",
+    "demoLink": "https://rishiofficial965-hub.github.io/ReactProject/"
   },
   {
     "id": 2,
-    "image": "https://images.unsplash.com/photo-1550439062-609e1531270e",
-    "title": "PixelDraw – Online Drawing Board",
-    "description": "A pixel-based drawing tool inspired by MS Paint with drag-to-draw, color picker, eraser, and grid snapping.",
-    "tags": ["JavaScript", "Canvas API", "CSS Grid"],
-    "repoLink": "https://github.com/example/pixeldraw",
-    "demoLink": "https://pixeldraw-demo.vercel.app/"
+    "image": "https://images.unsplash.com/photo-1537498425277-c283d32ef9db",
+    "title": "macOS Web OS",
+    "description": "A fully functional macOS desktop simulation built with React and Framer Motion, featuring draggable windows, terminal emulator, and markdown support.",
+    "tags": ["React", "Framer Motion", "Tailwind", "Vite"],
+    "repoLink": "https://github.com/rishiofficial965-hub/macOS",
+    "demoLink": "https://rishiofficial965-hub.github.io/macOS"
   },
   {
     "id": 3,
     "image": "https://images.unsplash.com/photo-1498050108023-c5249f4df085",
-    "title": "DevFinder – GitHub Profile Explorer",
-    "description": "A search tool that fetches GitHub profiles and displays repos, activity graphs, and pinned projects.",
-    "tags": ["React", "API Integration", "Tailwind"],
-    "repoLink": "https://github.com/example/devfinder",
-    "demoLink": "https://devfinder-search.netlify.app/"
+    "title": "Productivity Dashboard",
+    "description": "An all-in-one productivity suite featuring real-time weather updates, a task manager, daily planner, pomodoro timer, and motivational tools.",
+    "tags": ["JavaScript", "CSS Grid", "Local Storage", "Weather API"],
+    "repoLink": "https://github.com/rishiofficial965-hub/multiFunDashboard",
+    "demoLink": "https://rishiofficial965-hub.github.io/multiFunDashboard"
   },
   {
     "id": 4,
-    "image": "https://images.unsplash.com/photo-1525182008055-f88b95ff7980",
-    "title": "EduGenius – Course Recommendation System",
-    "description": "An AI-powered recommendation system that suggests the right courses based on user goals and skill level.",
-    "tags": ["Python", "Machine Learning", "Flask", "React"],
-    "repoLink": "https://github.com/example/edugenius",
-    "demoLink": "https://edugenius-app.vercel.app/"
+    "image": "https://images.unsplash.com/photo-1550439062-609e1531270e",
+    "title": "Creative Boutique Showcase",
+    "description": "An award-winning boutique agency landing page featuring advanced Three.js visual effects and Shery.js animations for a unique web experience.",
+    "tags": ["JavaScript", "Three.js", "GSAP", "Shery.js"],
+    "repoLink": "https://github.com/rishiofficial965-hub/profile",
+    "demoLink": "https://rishiofficial965-hub.github.io/profile"
   }
 ]
