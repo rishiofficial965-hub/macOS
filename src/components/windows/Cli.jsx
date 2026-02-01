@@ -180,7 +180,7 @@ LinkedIn: linkedin.com/in/rishi-ranjan`,
   };
 
   return (
-    <MacWin setWindowState={setWindowState} windowKey="cli">
+    <MacWin setWindowState={setWindowState} windowKey="cli" title="Terminal">
       <div
         ref={terminalRef}
         className="cli-window h-full bg-black/20 text-green-400 font-mono p-4 overflow-scroll scrollbar-hidden pb-10"

@@ -3,7 +3,7 @@ import MacWin from "./MacWin";
 
 const Spotify = ({ setWindowState }) => {
   return (
-    <MacWin setWindowState={setWindowState} windowKey="spotify">
+    <MacWin setWindowState={setWindowState} windowKey="spotify" title="Spotify">
       <div className="h-full w-full pb-10">
         <iframe
           data-testid="embed-iframe"

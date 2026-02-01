@@ -1,7 +1,7 @@
 import React, { Children } from "react";
 import { Rnd } from "react-rnd";
 
-const MacWin = ({ children, setWindowState, windowKey }) => {
+const MacWin = ({ children, setWindowState, windowKey, title = "Terminal" }) => {
   const handleClose = () => {
     if (setWindowState && windowKey) {
       setWindowState((s) => ({ ...s, [windowKey]: false }));
@@ -32,7 +32,7 @@ const MacWin = ({ children, setWindowState, windowKey }) => {
             <div className="h-4 w-4 bg-yellow-300 rounded-full cursor-pointer"></div>
             <div className="h-4 w-4 bg-green-400 rounded-full cursor-pointer"></div>
           </div>
-          <div className="">rishiranjan - zsh</div>
+          <div className="">{title}</div>
         </div>
 
         <div className="h-full p-2">{children}</div>
